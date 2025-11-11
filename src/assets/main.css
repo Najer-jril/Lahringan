@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'NeuePower-Ultra';
+  src: url('../fonts/NeuePower-Ultra.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BasementGrotesque';
+  src: url('../fonts/BasementGrotesque.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SaoTorpes';
+  src: url('../fonts/SaoTorpes.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mancunian';
+  src: url('../fonts/Mancunian.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Veritas';
+  src: url('../fonts/LTVeritas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Veritas-Condensed';
+  src: url('../fonts/LTVeritas-Condensed.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EmOne';
+  src: url('../fonts/EmOne-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-neuepower: 'NeuePower-Ultra', sans-serif;
+  --font-basement: 'BasementGrotesque', sans-serif;
+  --font-saotorpes: 'SaoTorpes', sans-serif;
+  --font-mancunian: 'Mancunian', sans-serif;
+  --font-veritas: 'Veritas', sans-serif;
+  --font-veritas-c: 'Veritas-Condensed', sans-serif;
+  --font-emone: 'EmOne', sans-serif;
+
+  --color-lavender: #feabef;
+  --color-choco: #1c1c1c;
+  --color-elime: #C6FF00;
+  --color-flash: #f3f3f3;
+  --color-june: #BCD63D;
+  --color-vamp: #0A0B03;
+  --color-rblack: #222222;
+  --color-whi: #F7F7F7;
+}
