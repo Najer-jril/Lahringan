@@ -1,32 +1,32 @@
 <template>
   <div
-    class="bg-june rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+    class="bg-whi rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
   >
-    <h3 class="text-xl font-semibold font-neuepower text-center text-vamp mb-3">
-      {{ service.title }}
-    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div>
+        <img :src="service.img" :alt="service.title" class="w-full h-full object-cover rounded-xl" />
+      </div>
 
-    <p class="text-vamp font-emone text-center text-sm mb-4 leading-relaxed">
-      {{ service.description }}
-    </p>
+      <div>
+        <h3 class="text-xl font-kilimanjaro text-vamp mb-3">
+          {{ service.title }}
+        </h3>
 
-    <ul v-if="service.features && service.features.length" class="space-y-2 mb-6">
-      <li
-        v-for="(feature, index) in service.features"
-        :key="index"
-        class="flex items-start text-sm text-vamp font-emone font-extralight"
-      >
-        <span> * {{ feature }}</span>
-      </li>
-    </ul>
+        <p class="text-vamp font-Ddincon font-semibold text-justify text-sm mb-4 leading-relaxed">
+          {{ service.description }}
+        </p>
 
-    <button
-      @click="learnMore"
-      class="w-full py-2 px-4 rounded-md font-medium transition-colors"
-      :class="buttonClass"
-    >
-      Learn More
-    </button>
+        <ul v-if="service.features && service.features.length" class="space-y-2">
+          <li
+            v-for="(feature, index) in service.features"
+            :key="index"
+            class="flex items-start text-sm text-vamp font-Ddincon font-semibold"
+          >
+            <span> * {{ feature }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,17 +46,4 @@ const props = defineProps({
     }),
   },
 })
-
-const emit = defineEmits(['learn-more'])
-
-const buttonClass = computed(() => {
-  const colors = {
-    choco: 'bg-vamp hover:bg-choco text-white',
-  }
-  return colors[props.service.color] || colors.choco
-})
-
-const learnMore = () => {
-  emit('learn-more', props.service)
-}
 </script>
