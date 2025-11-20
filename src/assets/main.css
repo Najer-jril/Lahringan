@@ -22,22 +22,8 @@
 }
 
 @font-face {
-  font-family: 'Mancunian';
-  src: url('../fonts/Mancunian.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Veritas';
   src: url('../fonts/LTVeritas-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Veritas-Condensed';
-  src: url('../fonts/LTVeritas-Condensed.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -57,15 +43,8 @@
 }
 
 @font-face {
-  font-family: 'Ddin';
-  src: url('../fonts/D-DIN.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ddincon';
-  src: url('../fonts/D-DINCondensed.ttf') format('truetype');
+  font-family: 'Garet';
+  src: url('../fonts/Garet-Book.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -74,15 +53,14 @@
   --font-neuepower: 'NeuePower-Ultra', sans-serif;
   --font-basement: 'BasementGrotesque', sans-serif;
   --font-saotorpes: 'SaoTorpes', sans-serif;
-  --font-mancunian: 'Mancunian', sans-serif;
   --font-veritas: 'Veritas', sans-serif;
-  --font-veritas-c: 'Veritas-Condensed', sans-serif;
   --font-emone: 'EmOne', sans-serif;
   --font-kilimanjaro: 'Kilimanjaro', sans-serif;
+  --font-garet: 'Garet', sans-serif;
 
   --color-choco: #1c1c1c;
   --color-flash: #f3f3f3;
-  --color-funky: #e9dc1d;
+  --color-funky: #BCD63D;
   --color-vamp: #0a0b03;
   --color-rblack: #222222;
   --color-whi: #f7f7f7;
