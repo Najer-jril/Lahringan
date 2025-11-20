@@ -12,7 +12,7 @@
           {{ service.title }}
         </h3>
 
-        <p class="text-vamp font-Ddincon font-semibold text-justify text-sm mb-4 leading-relaxed">
+        <p class="text-vamp font-garet font-semibold text-justify text-sm mb-4 leading-relaxed">
           {{ service.description }}
         </p>
 
@@ -20,7 +20,7 @@
           <li
             v-for="(feature, index) in service.features"
             :key="index"
-            class="flex items-start text-sm text-vamp font-Ddincon font-semibold"
+            class="flex items-start text-sm text-vamp font-garet font-semibold"
           >
             <span> * {{ feature }}</span>
           </li>

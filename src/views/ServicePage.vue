@@ -54,12 +54,14 @@
         <p class="text-xl mb-8 text-vamp font-emone">
           Lokasi LAHRINGAN terdekat bisa ditemukan dengan pencet tombol dibawah coy
         </p>
-        <RouterLink
-          to="/location"
-          class="inline-block bg-choco text-funky px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
-        >
-          Temukan Lokasi Kami
-        </RouterLink>
+        <div class="max-w-4xl mx-auto text-center transition-all duration-200 hover:-translate-y-1 cursor-pointer">
+          <RouterLink
+            to="/contact"
+            class="mt-8 text-center bg-choco text-funky px-8 py-3 rounded-lg font-semibold hover:bg-vamp hover:text-whi"
+          >
+            Temukan Lokasi Kami
+          </RouterLink>
+        </div>
       </div>
     </section>
 
@@ -70,13 +72,13 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
-import heroImage from '@/assets/lockerroom.jpg'
+import heroImage from '@/assets/hero/lockerroom.jpg'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import ServiceCard from '@/components/ServiceCard.vue'
-import paket1img from '@/assets/paket1.jpeg'
-import paket2img from '@/assets/paket2.jpeg'
-import rentalimg from '@/assets/rental.jpeg'
-import paketkomimg from '@/assets/paketkom.jpeg'
+import paket1img from '@/assets/service/paket1.jpeg'
+import paket2img from '@/assets/service/paket2.jpeg'
+import rentalimg from '@/assets/service/rental.jpeg'
+import paketkomimg from '@/assets/service/paketkom.jpeg'
 
 const router = useRouter()
 
