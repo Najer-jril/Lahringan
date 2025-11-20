@@ -10,19 +10,19 @@
 
       <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="h-full flex flex-col justify-center items-start md:w-1/2 md:ml-auto">
-          <h1 class="text-4xl md:text-5xl font-saotorpes text-june mb-6">
+          <h1 class="text-4xl md:text-5xl font-saotorpes text-funky mb-6">
             Lari Lebih Ringan, <br />Barang Lebih Aman
           </h1>
 
-          <p class="text-xl md:text-2xl font-neuepower text-white mb-8 max-w-lg">
+          <p class="text-xl md:text-2xl font-kilimanjaro text-white mb-8 max-w-lg">
             Titip barang kamu di LAHRINGAN, <br />
             solusi penitipan untuk pelari, pejalan santai, dan komunitas aktif.
           </p>
 
           <RouterLink
             to="/location"
-            class="bg-june text-gray-900 px-6 py-3 rounded-md font-neuepower font-medium hover:bg-opacity-80 transition-all duration-200"
-          >
+            class="bg-funky text-vamp px-4 py-2 rounded-md text-sm font-emone hover:bg-funky focus:outline-none cursor-pointer transition-all duration-300 hover:scale-115"
+        >
             Temukan Lokasi Kami
           </RouterLink>
         </div>
@@ -32,37 +32,37 @@
     <!-- why cus us -->
     <section class="bg-choco py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-basement text-center text-june mb-16">
+        <h2 class="text-3xl md:text-4xl font-basement text-center text-funky mb-16">
           Kenapa Pelari memilih kami?
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div class="flex flex-col items-center text-center">
-            <div class="bg-june p-6 rounded-2xl inline-block mb-4">
+            <div class="bg-funky p-6 rounded-2xl inline-block mb-4">
               <Lock class="w-12 h-12 text-vamp" />
             </div>
-            <h3 class="font-neuepower text-june text-xl">Keamanan Maksimal</h3>
+            <h3 class="font-neuepower text-funky text-xl">Keamanan Maksimal</h3>
           </div>
 
           <div class="flex flex-col items-center text-center">
-            <div class="bg-june p-6 rounded-2xl inline-block mb-4">
+            <div class="bg-funky p-6 rounded-2xl inline-block mb-4">
               <Zap class="w-12 h-12 text-gray-900" />
             </div>
-            <h3 class="font-neuepower text-june text-xl">Cepat dan Praktis</h3>
+            <h3 class="font-neuepower text-funky text-xl">Cepat dan Praktis</h3>
           </div>
 
           <div class="flex flex-col items-center text-center">
-            <div class="bg-june p-6 rounded-2xl inline-block mb-4">
+            <div class="bg-funky p-6 rounded-2xl inline-block mb-4">
               <Footprints class="w-12 h-12 text-gray-900" />
             </div>
-            <h3 class="font-neuepower text-june text-xl">Support Pelari</h3>
+            <h3 class="font-neuepower text-funky text-xl">Support Pelari</h3>
           </div>
         </div>
       </div>
     </section>
 
     <!-- testimonials -->
-    <section class="py-16 bg-june">
+    <section class="py-16 bg-funky">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-choco font-basement mb-4">
@@ -86,26 +86,49 @@
     <section class="py-16 bg-choco">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-basement font-semibold text-june mb-4">
+          <h2 class="text-3xl md:text-4xl font-basement font-semibold text-funky mb-4">
             Lari Makin Jauh Dengan Layanan Kami
           </h2>
-          <h4 class="text-xl md:text-xl font-emone font-normal text-june mb-4">
+          <h4 class="text-xl md:text-xl font-emone font-normal text-funky mb-4">
             Cek yang paling laris di tempat ini!!
           </h4>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ServiceCard
-            v-for="service in services"
-            :key="service.title"
-            :service="service"
-            @learn-more="handleLearnMore"
-          />
-        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-whi text-vamp p-6 rounded-lg font-emone">
+            <h3 class="text-xl font-basement font-semibold mb-4 text-center">Penitipan Reguler</h3>
+            <p class="mb-4 border-t border-gray-400 pt-4">Simpan barang kamu dengan aman di lokasi strategis.</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Locker kecil</li>
+              <li>Air mineral 600ml</li>
+              <li>Waktu penitipan maksimal 5 jam</li>
+            </ul>
+          </div>
+
+          <div class="bg-whi text-vamp p-6 rounded-lg font-emone">
+            <h3 class="text-xl font-basement font-semibold mb-4 text-center">Peminjaman Sepatu</h3>
+            <p class="mb-4 border-t border-gray-400 pt-4">Sepatu kentang? Tenang, kami punya stok siap gas race.</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Sepatu ukuran 38-45</li>
+              <li>Berbagai model tersedia</li>
+              <li>Sewa harian atau mingguan</li>
+            </ul>
+          </div>
+
+          <div class="bg-whi text-vamp p-6 rounded-lg font-emone">
+            <h3 class="text-xl font-basement font-semibold mb-4 text-center">Runner Pro Support</h3>
+            <p class="mb-4 border-t border-gray-400 pt-4">Locker prioritas dan akses cepat untuk pelari profesional.</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Locker medium</li>
+              <li>Handuk kecil + air mineral 600ml</li>
+              <li>Waktu penitipan maksimal 5 jam</li>
+            </ul>
+          </div>
+        </div>
         <div class="max-w-4xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 text-center">
           <RouterLink
             to="/service"
-            class="inline-block bg-june text-vamp px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition font-emone"
+            class="inline-block bg-funky text-vamp px-8 py-3 rounded-lg font-emone font-semibold hover:bg-funky focus:outline-none cursor-pointer transition-all duration-300 hover:scale-115"
           >
             Pencet ini buat liat layanan lainnya
           </RouterLink>
@@ -114,7 +137,7 @@
     </section>
 
     <!-- cta -->
-    <section class="bg-june text-white py-16">
+    <section class="bg-funky text-white py-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-basement text-vamp font-bold mb-4">
           Siap Lari Tanpa Beban??
@@ -125,7 +148,7 @@
         </p>
         <RouterLink
           to="/location"
-          class="inline-block bg-choco text-june px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+          class="inline-block bg-choco text-funky px-8 py-3 rounded-lg font-emone hover:bg-choco focus:outline-none cursor-pointer transition-all duration-300 hover:scale-115"
         >
           Temukan Lokasi Kami
         </RouterLink>
@@ -137,13 +160,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-3xl md:text-4xl font-basement font-semibold text-june mb-6">
+            <h2 class="text-3xl md:text-4xl font-basement font-semibold text-funky mb-6">
               Ada pertanyaan atau ingin menitip perlengkapan lari kamu?
             </h2>
-            <h4 class="text-xl md:text-xl font-emone font-normal text-june mb-4">
+            <h4 class="text-xl md:text-xl font-emone font-normal text-funky mb-4">
               Butuh informasi lebih lanjut tentang layanan penitipan atau kerjasama komunitas lari?
             </h4>
-            <h4 class="text-xl md:text-xl font-emone font-normal text-june">
+            <h4 class="text-xl md:text-xl font-emone font-normal text-funky">
               Isi formulir di samping atau kunjungi lokasi kami langsung. legoo!!
             </h4>
           </div>
@@ -154,7 +177,7 @@
     </section>
 
     <!-- faq -->
-    <section class="bg-june text-white py-16">
+    <section class="bg-funky text-white py-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-basement text-vamp font-bold mb-4">
           Orang-orang nanyain ini terus
@@ -171,38 +194,12 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
 import { ref } from 'vue'
-import heroImage from '@/assets/jogging.jpg'
+import heroImage from '@/assets/hero/jogging.jpg'
 import { Footprints, Lock, Zap } from 'lucide-vue-next'
 import ScrollToTop from '../components/ScrollToTop.vue'
-import ServiceCard from '@/components/ServiceCard.vue'
 import TestimonialCard from '@/components/TestimonialCard.vue'
 import FAQAccordion from '@/components/FAQAccordion.vue'
-
-const router = useRouter()
-
-const services = ref([
-  {
-    title: 'Penitipan Reguler',
-    description: 'Simpan barang kamu dengan aman di lokasi strategis.',
-    features: ['Locker kecil', 'Air mineral 600ml', 'Waktu penitipan maksimal 3 jam'],
-  },
-  {
-    title: 'Peminjaman Sepatu',
-    description: 'Sepatu kentang? Tenang, kami punya stok siap gas race.',
-    features: ['Sepatu ukuran 38-45', 'Berbagai model tersedia', 'Sewa harian atau mingguan'],
-  },
-  {
-    title: 'Runner Pro Support',
-    description: 'Locker prioritas dan akses cepat untuk pelari profesional.',
-    features: [
-      'Locker medium',
-      'Handuk kecil + air mineral 600ml',
-      'Waktu penitipan maksimal 5 jam',
-    ],
-  },
-])
 
 const testimonials = ref([
   {
@@ -255,7 +252,4 @@ const faqs = ref([
   },
 ])
 
-const handleLearnMore = () => {
-  router.push('/service')
-}
 </script>
