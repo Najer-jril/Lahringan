@@ -1,17 +1,17 @@
 <template>
-  <header class="bg-choco shadow-md sticky top-0 z-50">
+  <header class="bg-choco shadow-md sticky top-0 z-50 border-b-3 border-funky">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center">
-          <RouterLink to="/" class="text-3xl font-basement text-elime"> LAHRINGAN </RouterLink>
+          <RouterLink to="/" class="text-3xl font-basement text-funky"> LAHRINGAN </RouterLink>
         </div>
 
         <nav class="hidden md:flex space-x-8">
           <RouterLink to="/" v-slot="{ isActive }">
             <span
               :class="[
-                'hover:text-elime hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
-                isActive ? 'text-elime underline underline-offset-4' : 'text-flash',
+                'hover:text-funky hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
+                isActive ? 'text-funky underline underline-offset-4' : 'text-flash',
               ]"
             >
               Home
@@ -21,8 +21,8 @@
           <RouterLink to="/service" v-slot="{ isActive }">
             <span
               :class="[
-                'hover:text-elime hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
-                isActive ? 'text-elime underline underline-offset-4' : 'text-flash',
+                'hover:text-funky hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
+                isActive ? 'text-funky underline underline-offset-4' : 'text-flash',
               ]"
             >
               Services
@@ -32,8 +32,8 @@
           <RouterLink to="/location" v-slot="{ isActive }">
             <span
               :class="[
-                'hover:text-elime hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
-                isActive ? 'text-elime underline underline-offset-4' : 'text-flash',
+                'hover:text-funky hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
+                isActive ? 'text-funky underline underline-offset-4' : 'text-flash',
               ]"
             >
               Location
@@ -43,8 +43,8 @@
           <RouterLink to="/news" v-slot="{ isActive }">
             <span
               :class="[
-                'hover:text-elime hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
-                isActive ? 'text-elime underline underline-offset-4' : 'text-flash',
+                'hover:text-funky hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
+                isActive ? 'text-funky underline underline-offset-4' : 'text-flash',
               ]"
             >
               News
@@ -54,8 +54,8 @@
           <RouterLink to="/about" v-slot="{ isActive }">
             <span
               :class="[
-                'hover:text-elime hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
-                isActive ? 'text-elime underline underline-offset-4' : 'text-flash',
+                'hover:text-funky hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
+                isActive ? 'text-funky underline underline-offset-4' : 'text-flash',
               ]"
             >
               About Us
@@ -65,8 +65,8 @@
           <RouterLink to="/contact" v-slot="{ isActive }">
             <span
               :class="[
-                'hover:text-elime hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
-                isActive ? 'text-elime underline underline-offset-4' : 'text-flash',
+                'hover:text-funky hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
+                isActive ? 'text-funky underline underline-offset-4' : 'text-flash',
               ]"
             >
               Contact
@@ -78,22 +78,8 @@
           @click="toggleMobileMenu"
           class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              v-if="!isMobileMenuOpen"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-            <path
-              v-else
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+          <Menu v-if="!isMobileMenuOpen" class="w-6 h-6 text-funky" />
+          <X v-else class="w-6 h-6 text-funky" />
         </button>
       </div>
 
@@ -101,48 +87,48 @@
         <nav class="flex flex-col space-y-3">
           <RouterLink
             to="/"
-            class="text-flash hover:text-elime transition font-neuepower"
-            active-class="text-elime underline underline-offset-4"
+            class="text-flash hover:text-funky transition font-neuepower"
+            active-class="text-funky underline underline-offset-4"
             @click="closeMobileMenu"
           >
             Home
           </RouterLink>
           <RouterLink
-            to="/about"
-            class="text-flash hover:text-elime transition font-neuepower"
-            active-class="text-elime underline underline-offset-4"
-            @click="closeMobileMenu"
-          >
-            About
-          </RouterLink>
-          <RouterLink
             to="/service"
-            class="text-flash hover:text-elime transition font-neuepower"
-            active-class="text-elime underline underline-offset-4"
+            class="text-flash hover:text-funky transition font-neuepower"
+            active-class="text-funky underline underline-offset-4"
             @click="closeMobileMenu"
           >
             Services
           </RouterLink>
           <RouterLink
             to="/location"
-            class="text-flash hover:text-elime transition font-neuepower"
-            active-class="text-elime underline underline-offset-4"
+            class="text-flash hover:text-funky transition font-neuepower"
+            active-class="text-funky underline underline-offset-4"
             @click="closeMobileMenu"
           >
             Location
           </RouterLink>
           <RouterLink
             to="/news"
-            class="text-flash hover:text-elime transition font-neuepower"
-            active-class="text-elime underline underline-offset-4"
+            class="text-flash hover:text-funky transition font-neuepower"
+            active-class="text-funky underline underline-offset-4"
             @click="closeMobileMenu"
           >
             News
           </RouterLink>
           <RouterLink
+            to="/about"
+            class="text-flash hover:text-funky transition font-neuepower"
+            active-class="text-funky underline underline-offset-4"
+            @click="closeMobileMenu"
+          >
+            About
+          </RouterLink>
+          <RouterLink
             to="/contact"
-            class="text-flash hover:text-elime transition font-neuepower"
-            active-class="text-elime underline underline-offset-4"
+            class="text-flash hover:text-funky transition font-neuepower"
+            active-class="text-funky underline underline-offset-4"
             @click="closeMobileMenu"
           >
             Contact
@@ -155,6 +141,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { Menu, X } from 'lucide-vue-next'
 
 defineOptions({
   name: 'AppNavbar',

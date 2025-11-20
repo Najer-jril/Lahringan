@@ -16,7 +16,7 @@
         </div>
 
         <div class="ml-4">
-          <h4 class="text-base font-basement font-semibold text-choco">{{ testimonial.name }}</h4>
+          <h4 class="text-base font-basement font-normal text-choco">{{ testimonial.name }}</h4>
           <p class="text-sm font-emone text-gray-600">{{ testimonial.position }}</p>
           <div class="flex items-center mb-2 mt-2">
             <div class="flex">
