@@ -1,4 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomePage from '../views/HomePage.vue'
+import ServicePage from '../views/ServicePage.vue'
+import LocationPage from '../views/LocationPage.vue'
+import LocationDetailPage from '../views/LocationDetailPage.vue'
+import NewsPage from '../views/NewsPage.vue'
+import AboutPage from '../views/AboutPage.vue'
+import ContactPage from '../views/ContactPage.vue'
+import NewsDetailPage from '../views/NewsDetailPage.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -6,39 +15,49 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/HomePage.vue'),
+      component: HomePage,
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import('../views/About.vue'),
-    // },
-    // {
-    //   path: '/service',
-    //   name: 'service',
-    //   component: () => import('../views/Service.vue'),
-    // },
-    // {
-    //   path: '/location',
-    //   name: 'location',
-    //   component: () => import('../views/Location.vue'),
-    // },
-    // {
-    //   path: '/news',
-    //   name: 'news',
-    //   component: () => import('../views/News.vue'),
-    // },
-    // {
-    //   path: '/contact',
-    //   name: 'contact',
-    //   component: () => import('../views/Contact.vue'),
-    // },
+    {
+      path: '/service',
+      name: 'service',
+      component: ServicePage,
+    },
+    {
+      path: '/location',
+      name: 'location',
+      component: LocationPage,
+    },
+    {
+      path: '/location-detail',
+      name: 'location-detail',
+      component: LocationDetailPage,
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: NewsPage,
+    },
+    {
+      path: '/news-detail',
+      name: 'news-detail',
+      component: NewsDetailPage,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: AboutPage,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactPage,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
     } else {
-      return { top: 0 }
+      return { top: 0, behavior: 'smooth'}
     }
   },
 })
