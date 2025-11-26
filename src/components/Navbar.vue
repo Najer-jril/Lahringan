@@ -1,12 +1,12 @@
 <template>
   <header class="bg-choco shadow-md sticky top-0 z-50 border-b-3 border-funky">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
+      <div class="flex justify-between items-center h-20 md:h-16">
         <div class="flex items-center">
-          <RouterLink to="/" class="text-3xl font-basement text-funky"> LAHRINGAN </RouterLink>
+          <RouterLink to="/" class="text-2xl lg:text-3xl font-basement text-funky"> LAHRINGAN </RouterLink>
         </div>
 
-        <nav class="hidden md:flex space-x-8">
+        <nav class="hidden md:flex space-x-5 lg:space-x-8">
           <RouterLink to="/" v-slot="{ isActive }">
             <span
               :class="[
