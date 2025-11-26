@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-choco text-funky font-emone border-t-3 border-funky">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8">
         <div>
           <RouterLink to="/" class="text-3xl font-basement"> LAHRINGAN </RouterLink>
           <p class="text-xl font-neuepower">
