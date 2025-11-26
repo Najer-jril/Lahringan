@@ -2,7 +2,7 @@
   <div
     class="bg-whi rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
   >
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div>
         <img :src="service.img" :alt="service.title" class="w-full h-full object-cover rounded-xl" />
       </div>
@@ -31,19 +31,11 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
 
-const props = defineProps({
+defineProps({
   service: {
     type: Object,
-    default: () => ({
-      title: 'Service Title',
-      description:
-        'This is a detailed description of the service we provide. It explains the value and benefits.',
-      icon: 'default',
-      color: 'blue',
-      features: ['Feature 1', 'Feature 2', 'Feature 3'],
-    }),
+    required: true,
   },
 })
 </script>
