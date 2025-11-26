@@ -3,26 +3,50 @@
   <div class="home-page">
     <!-- hero -->
     <section
-      class="relative h-screen bg-cover bg-center"
+      class="relative bg-cover bg-center"
       :style="{ backgroundImage: `url(${heroImage})` }"
     >
       <div class="absolute inset-0 bg-gray-900/60"></div>
 
-      <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="h-full flex flex-col justify-center items-start md:w-1/2 md:ml-auto">
-          <h1 class="text-4xl md:text-5xl font-saotorpes text-funky mb-6">
+      <div
+        class="relative z-10 max-w-7xl mx-auto
+        px-4 py-20
+        flex flex-col items-center justify-center text-center
+        sm:px-6 sm:py-24
+        md:items-end md:justify-end md:text-right md:px-8 md:py-28
+        lg:px-10 lg:py-32"
+      >
+        <div
+          class="flex flex-col
+          items-center text-center
+          md:items-end md:text-right md:max-w-md
+          lg:max-w-lg"
+        >
+          <h1
+            class="text-4xl font-saotorpes text-funky mb-6 leading-tight
+            lg:text-5xl"
+          >
             Lari Lebih Ringan, <br />Barang Lebih Aman
           </h1>
 
-          <p class="text-xl md:text-2xl font-kilimanjaro text-white mb-8 max-w-lg">
-            Titip barang kamu di LAHRINGAN, <br />
-            solusi penitipan untuk pelari, pejalan santai, dan komunitas aktif.
+          <p
+            class="font-kilimanjaro text-white mb-8 max-w-md
+            sm:text-2xl
+            md:text-2xl
+            lg:text-5xl lg:max-w-xl"
+          >
+            Titip barang kamu di LAHRINGAN, solusi penitipan untuk pelari, pejalan santai, dan
+            komunitas aktif.
           </p>
 
           <RouterLink
             to="/location"
-            class="bg-funky text-vamp px-4 py-2 rounded-md text-sm font-emone hover:bg-funky focus:outline-none cursor-pointer transition-all duration-300 hover:scale-115"
-        >
+            class="bg-funky text-vamp px-5 py-3 rounded-md text-sm font-emone
+            hover:bg-funky hover:scale-105
+            focus:outline-none
+            cursor-pointer transition-all duration-300
+            w-auto"
+          >
             Temukan Lokasi Kami
           </RouterLink>
         </div>
@@ -30,13 +54,28 @@
     </section>
 
     <!-- why cus us -->
-    <section class="bg-choco py-16 md:py-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-basement text-center text-funky mb-16">
+    <section
+      class="bg-choco
+      py-16
+      md:py-24"
+    >
+      <div
+        class="max-w-7xl mx-auto
+        px-4
+        sm:px-6
+        lg:px-8"
+      >
+        <h2
+          class="text-3xl font-basement text-center text-funky mb-16
+          md:text-4xl"
+        >
           Kenapa Pelari memilih kami?
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div
+          class="grid grid-cols-1 gap-12
+          md:grid-cols-3"
+        >
           <div class="flex flex-col items-center text-center">
             <div class="bg-funky p-6 rounded-2xl inline-block mb-4">
               <Lock class="w-12 h-12 text-vamp" />
@@ -63,16 +102,27 @@
 
     <!-- testimonials -->
     <section class="py-16 bg-funky">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="max-w-7xl mx-auto
+        px-4
+        sm:px-6
+        lg:px-8"
+      >
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-choco font-basement mb-4">
+          <h2
+            class="text-3xl font-bold text-choco font-basement mb-4
+            md:text-4xl"
+          >
             kata-kata mereka yang sudah mampir
           </h2>
           <p class="text-choco font-emone max-w-2xl mx-auto">
             Ini kata dari mereka, kalo kamu mau ngasih testimoni juga, sokin lah!!
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="grid grid-cols-1 gap-8
+          md:grid-cols-3"
+        >
           <TestimonialCard
             v-for="(testimonial, index) in testimonials"
             :key="index"
@@ -84,20 +134,38 @@
 
     <!-- services -->
     <section class="py-16 bg-choco">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="max-w-7xl mx-auto
+        px-4
+        sm:px-6
+        lg:px-8"
+      >
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-basement font-semibold text-funky mb-4">
+          <h2
+            class="text-3xl font-basement font-semibold text-funky mb-4
+            md:text-4xl"
+          >
             Lari Makin Jauh Dengan Layanan Kami
           </h2>
-          <h4 class="text-xl md:text-xl font-emone font-normal text-funky mb-4">
+          <h4
+            class="text-xl font-emone font-normal text-funky mb-4
+            md:text-xl"
+          >
             Cek yang paling laris di tempat ini!!
           </h4>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="grid grid-cols-1 gap-8
+          md:grid-cols-3"
+        >
           <div class="bg-whi text-vamp p-6 rounded-lg font-emone">
-            <h3 class="text-xl font-basement font-semibold mb-4 text-center">Penitipan Reguler</h3>
-            <p class="mb-4 border-t border-gray-400 pt-4">Simpan barang kamu dengan aman di lokasi strategis.</p>
+            <h3 class="text-xl font-basement font-semibold mb-4 text-center">
+              Penitipan Reguler
+            </h3>
+            <p class="mb-4 border-t border-gray-400 pt-4">
+              Simpan barang kamu dengan aman di lokasi strategis.
+            </p>
             <ul class="list-disc list-inside space-y-2">
               <li>Locker kecil</li>
               <li>Air mineral 600ml</li>
@@ -106,8 +174,12 @@
           </div>
 
           <div class="bg-whi text-vamp p-6 rounded-lg font-emone">
-            <h3 class="text-xl font-basement font-semibold mb-4 text-center">Peminjaman Sepatu</h3>
-            <p class="mb-4 border-t border-gray-400 pt-4">Sepatu kentang? Tenang, kami punya stok siap gas race.</p>
+            <h3 class="text-xl font-basement font-semibold mb-4 text-center">
+              Peminjaman Sepatu
+            </h3>
+            <p class="mb-4 border-t border-gray-400 pt-4">
+              Sepatu kentang? Tenang, kami punya stok siap gas race.
+            </p>
             <ul class="list-disc list-inside space-y-2">
               <li>Sepatu ukuran 38-45</li>
               <li>Berbagai model tersedia</li>
@@ -116,8 +188,12 @@
           </div>
 
           <div class="bg-whi text-vamp p-6 rounded-lg font-emone">
-            <h3 class="text-xl font-basement font-semibold mb-4 text-center">Runner Pro Support</h3>
-            <p class="mb-4 border-t border-gray-400 pt-4">Locker prioritas dan akses cepat untuk pelari profesional.</p>
+            <h3 class="text-xl font-basement font-semibold mb-4 text-center">
+              Runner Pro Support
+            </h3>
+            <p class="mb-4 border-t border-gray-400 pt-4">
+              Locker prioritas dan akses cepat untuk pelari profesional.
+            </p>
             <ul class="list-disc list-inside space-y-2">
               <li>Locker medium</li>
               <li>Handuk kecil + air mineral 600ml</li>
@@ -125,10 +201,18 @@
             </ul>
           </div>
         </div>
-        <div class="max-w-4xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          class="max-w-4xl mx-auto mt-8 text-center
+          px-4
+          sm:px-6
+          lg:px-8"
+        >
           <RouterLink
             to="/service"
-            class="inline-block bg-funky text-vamp px-8 py-3 rounded-lg font-emone font-semibold hover:bg-funky focus:outline-none cursor-pointer transition-all duration-300 hover:scale-115"
+            class="inline-block bg-funky text-vamp px-8 py-3 rounded-lg font-emone font-semibold
+            hover:bg-funky hover:scale-115
+            focus:outline-none
+            cursor-pointer transition-all duration-300"
           >
             Pencet ini buat liat layanan lainnya
           </RouterLink>
@@ -138,8 +222,16 @@
 
     <!-- cta -->
     <section class="bg-funky text-white py-16">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-basement text-vamp font-bold mb-4">
+      <div
+        class="max-w-4xl mx-auto text-center
+        px-4
+        sm:px-6
+        lg:px-8"
+      >
+        <h2
+          class="text-3xl font-basement text-vamp font-bold mb-4
+          md:text-4xl"
+        >
           Siap Lari Tanpa Beban??
         </h2>
         <p class="text-xl mb-8 text-vamp font-emone">
@@ -148,7 +240,10 @@
         </p>
         <RouterLink
           to="/location"
-          class="inline-block bg-choco text-funky px-8 py-3 rounded-lg font-emone hover:bg-choco focus:outline-none cursor-pointer transition-all duration-300 hover:scale-115"
+          class="inline-block bg-choco text-funky px-8 py-3 rounded-lg font-emone
+          hover:bg-choco hover:scale-115
+          focus:outline-none
+          cursor-pointer transition-all duration-300"
         >
           Temukan Lokasi Kami
         </RouterLink>
@@ -156,33 +251,73 @@
     </section>
 
     <!-- form -->
-    <section class="py-16 md:py-24 bg-choco">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section
+      class="bg-choco
+      py-16
+      md:py-24"
+    >
+      <div
+        class="max-w-7xl mx-auto
+        px-4
+        sm:px-6
+        lg:px-8"
+      >
+        <div
+          class="grid grid-cols-1 gap-16 items-center
+          md:grid-cols-2"
+        >
           <div>
-            <h2 class="text-3xl md:text-4xl font-basement font-semibold text-funky mb-6">
+            <h2
+              class="text-3xl font-basement font-semibold text-funky mb-6
+              md:text-4xl"
+            >
               Ada pertanyaan atau ingin menitip perlengkapan lari kamu?
             </h2>
-            <h4 class="text-xl md:text-xl font-emone font-normal text-funky mb-4">
+            <h4
+              class="text-xl font-emone font-normal text-funky mb-4
+              md:text-xl"
+            >
               Butuh informasi lebih lanjut tentang layanan penitipan atau kerjasama komunitas lari?
             </h4>
-            <h4 class="text-xl md:text-xl font-emone font-normal text-funky">
+            <h4
+              class="text-xl font-emone font-normal text-funky
+              md:text-xl"
+            >
               Isi formulir di samping atau kunjungi lokasi kami langsung. legoo!!
             </h4>
           </div>
 
-          <div class="bg-gray-200 p-8 rounded-lg min-h-[450px]"></div>
+          <RouterLink
+            to="/contact"
+            class="mt-8 text-center bg-funky text-choco px-8 py-3 rounded-lg font-semibold max-w-xs mx-auto
+            hover:scale-115
+            focus:outline-none
+            cursor-pointer transition-all duration-300"
+          >
+            Hubungi Kami
+          </RouterLink>
         </div>
       </div>
     </section>
 
     <!-- faq -->
     <section class="bg-funky text-white py-16">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-basement text-vamp font-bold mb-4">
+      <div
+        class="max-w-4xl mx-auto text-center
+        px-4
+        sm:px-6
+        lg:px-8"
+      >
+        <h2
+          class="text-3xl font-basement text-vamp font-bold mb-4
+          md:text-4xl"
+        >
           Orang-orang nanyain ini terus
         </h2>
-        <h4 class="text-xl md:text-xl font-emone font-normal text-vamp mb-4">
+        <h4
+          class="text-xl font-emone font-normal text-vamp mb-4
+          md:text-xl"
+        >
           kali aja jawabannya ada di sini
         </h4>
         <FAQAccordion :items="faqs" />
@@ -251,5 +386,4 @@ const faqs = ref([
       'Selain penitipan sepatu, kami juga menawarkan layanan penitipan barang reguler dan paket khusus untuk komunitas pelari. Silakan kunjungi halaman layanan kami untuk informasi lebih lanjut.',
   },
 ])
-
 </script>
