@@ -1,56 +1,56 @@
+<!-- src/components/TestimonialCard.vue -->
 <template>
-  <div class="bg-whi rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-    <div>
-      <div class="flex items-center">
-        <div class="shrink-0">
-          <div v-if="testimonial.avatar" class="w-12 h-12 rounded-full overflow-hidden">
-            <img
-              :src="testimonial.avatar"
-              :alt="testimonial.name"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="mb-4">
-            <User class="w-8 h-8 text-vamp opacity-60" />
-          </div>
+  <div
+    class="bg-flash rounded-2xl p-6 shadow-md border-b-4 border-gray-200 hover:border-funky transition-all duration-300 hover:-translate-y-1 h-full flex flex-col"
+  >
+    <div class="flex items-center mb-4">
+      <div class="shrink-0 relative">
+        <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-funky p-0.5">
+          <img
+            :src="
+              testimonial.avatar ||
+              `https://ui-avatars.com/api/?name=${testimonial.name}&background=random`
+            "
+            :alt="testimonial.name"
+            class="w-full h-full object-cover rounded-full"
+          />
         </div>
+      </div>
 
-        <div class="ml-4">
-          <h4 class="text-base font-basement font-normal text-choco">{{ testimonial.name }}</h4>
-          <p class="text-sm font-emone text-gray-600">{{ testimonial.position }}</p>
-          <div class="flex items-center mb-2 mt-2">
-            <div class="flex">
-              <Star
-                v-for="star in 5"
-                :key="star"
-                class="w-5 h-5"
-                :class="star <= testimonial.rating ? 'text-yellow-400' : 'text-gray-300'"
-                fill="currentColor"
-              />
-            </div>
-            <span class="ml-2 text-sm text-gray-600">{{ testimonial.rating }}/5</span>
-          </div>
+      <div class="ml-4">
+        <h4 class="text-lg font-basement font-bold text-vamp leading-none mb-1">
+          {{ testimonial.name }}
+        </h4>
+        <p class="text-xs font-emone text-grayind uppercase tracking-wide mb-1">
+          {{ testimonial.position }}
+        </p>
+        <div class="flex items-center gap-0.5">
+          <Star
+            v-for="star in 5"
+            :key="star"
+            class="w-3.5 h-3.5"
+            :class="star <= testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-grayind'"
+          />
         </div>
       </div>
     </div>
 
-    <div class="border-t border-gray-200 my-4 pt-4">
-      <p class="text-choco text-base mb-6 leading-relaxed italic font-emone">
-        "{{ testimonial.text }}"
+    <div class="grow">
+      <p class="text-grayind font-garet text-sm leading-relaxed italic relative z-10">
+        <span class="text-4xl text-funky absolute -top-4 -left-2 opacity-30 font-serif">"</span>
+        {{ testimonial.text }}
       </p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { Star, User } from 'lucide-vue-next'
+import { Star } from 'lucide-vue-next'
 
-const props = defineProps({
+defineProps({
   testimonial: {
     type: Object,
     required: true,
   },
 })
-
 </script>

@@ -16,24 +16,24 @@
           <div class="grid grid-cols-2 gap-4 font-light">
             <ul class="space-y-2">
               <li>
-                <RouterLink to="/" class="hover:text-white transition">Home</RouterLink>
+                <RouterLink to="/" class="hover:text-flash transition">Home</RouterLink>
               </li>
               <li>
-                <RouterLink to="/service" class="hover:text-white transition">Services</RouterLink>
+                <RouterLink to="/service" class="hover:text-flash transition">Services</RouterLink>
               </li>
               <li>
-                <RouterLink to="/location" class="hover:text-white transition">Location</RouterLink>
+                <RouterLink to="/location" class="hover:text-flash transition">Location</RouterLink>
               </li>
             </ul>
             <ul class="space-y-2">
               <li>
-                <RouterLink to="/news" class="hover:text-white transition">News</RouterLink>
+                <RouterLink to="/news" class="hover:text-flash transition">News</RouterLink>
               </li>
               <li>
-                <RouterLink to="/about" class="hover:text-white transition">About Us</RouterLink>
+                <RouterLink to="/about" class="hover:text-flash transition">About Us</RouterLink>
               </li>
               <li>
-                <RouterLink to="/contact" class="hover:text-white transition">Contact</RouterLink>
+                <RouterLink to="/contact" class="hover:text-flash transition">Contact</RouterLink>
               </li>
             </ul>
           </div>
@@ -48,7 +48,7 @@
                 href="http://instagram.com/najriiil"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-white transition"
+                class="hover:text-flash transition"
                 >Instagram</a
               >
             </li>
@@ -57,7 +57,7 @@
                 href="http://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-white transition"
+                class="hover:text-flash transition"
                 >X</a
               >
             </li>
@@ -66,7 +66,7 @@
                 href="http://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-white transition"
+                class="hover:text-flash transition"
                 >Facebook</a
               >
             </li>
@@ -75,7 +75,7 @@
                 href="http://strava.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-white transition"
+                class="hover:text-flash transition"
                 >Strava</a
               >
             </li>

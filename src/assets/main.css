@@ -64,6 +64,7 @@
   --color-vamp: #0a0b03;
   --color-rblack: #222222;
   --color-whi: #f7f7f7;
+  --color-grayind: #4b5362;
 }
 html {
   scroll-behavior: smooth;

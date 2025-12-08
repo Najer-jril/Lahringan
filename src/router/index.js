@@ -28,7 +28,7 @@ const router = createRouter({
       component: LocationPage,
     },
     {
-      path: '/location-detail',
+      path: '/location/:id',
       name: 'location-detail',
       component: LocationDetailPage,
     },
@@ -38,7 +38,7 @@ const router = createRouter({
       component: NewsPage,
     },
     {
-      path: '/news-detail',
+      path: '/news/:id',
       name: 'news-detail',
       component: NewsDetailPage,
     },

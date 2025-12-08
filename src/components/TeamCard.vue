@@ -1,34 +1,44 @@
 <template>
   <article
-    class="bg-flash rounded-xl shadow-md overflow-hidden hover:shadow-lg w-56 max-w-sm hover:scale-105 transition-transform duration-300"
+    class="bg-flash rounded-2xl shadow-lg overflow-hidden hover:shadow-funky/50 transition-all duration-300 hover:-translate-y-2 group border border-gray-100 w-full max-w-sm flex flex-col"
   >
-    <!-- gambar -->
-    <div class="h-56 bg-gray-200 relative overflow-hidden">
+    <div class="h-64 bg-gray-200 relative overflow-hidden shrink-0">
       <img
         v-if="team.image"
         :src="team.image"
         :alt="team.name"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
       <div
         v-else
         class="w-full h-full flex items-center justify-center bg-linear-to-br from-funky to-vamp"
       >
-        <User class="w-10 h-10 text-white/80" />
+        <User class="w-16 h-16 text-flash/50" />
+      </div>
+
+      <div class="absolute bottom-0 p-4">
+        <h3 class="text-2xl font-basement text-flash mb-0.5 text-shadow-md"
+            style="text-shadow: 2px 2px 0 #1f1f1f">{{ team.name }}</h3>
+        <span class="text-funky font-bold text-sm uppercase tracking-widest"
+        style="text-shadow: 2px 2px 0 #1f1f1f">{{ team.role }}</span>
       </div>
     </div>
 
-    <!-- desk -->
-    <div class="p-4 text-center font-neuepower border-t-3 border-vamp">
-      <!-- nama -->
-      <h3 class="text-xl text-center text-vamp mb-2 line-clamp-1">
-        {{ team.name }}
-      </h3>
+    <div class="p-5 bg-flash grow flex flex-col justify-end">
+      <div class="grid grid-cols-2 gap-3 mb-4">
+        <div class="bg-gray-50 p-2 rounded-lg border border-gray-100 text-center">
+            <p class="text-[10px] text-grayind uppercase font-bold">Pace</p>
+            <p class="text-vamp font-extralight font-basement">{{ team.pace || '6:30' }} <span class="text-xs font-normal">/km</span></p>
+        </div>
+        <div class="bg-gray-50 p-2 rounded-lg border border-gray-100 text-center">
+            <p class="text-[10px] text-grayind uppercase font-bold">Longest</p>
+            <p class="text-vamp font-extralight font-basement">{{ team.distance || 'belum pernah lari' }}</p>
+        </div>
+      </div>
 
-      <!-- role -->
-      <span class="bg-funky/50 inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-sm px-1.5 py-0.5 rounded-sm">
-        {{ team.role }}
-      </span>
+      <div class="text-center text-md text-grayind font-bold border-t border-grayind pt-3">
+         <span class="mr-2">{{ team.shoe || 'Nyeker' }}</span>
+      </div>
     </div>
   </article>
 </template>
