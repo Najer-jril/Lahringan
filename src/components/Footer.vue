@@ -35,6 +35,9 @@
               <li>
                 <RouterLink to="/contact" class="hover:text-flash transition">Contact</RouterLink>
               </li>
+              <li>
+                <RouterLink to="/cots" class="hover:text-flash transition">TUGAS COTS</RouterLink>
+              </li>
             </ul>
           </div>
         </div>

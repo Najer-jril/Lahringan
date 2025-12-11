@@ -72,6 +72,17 @@
               Contact
             </span>
           </RouterLink>
+
+          <RouterLink to="/cots" v-slot="{ isActive }">
+            <span
+              :class="[
+                'hover:text-funky hover:-translate-y-0.5 transition-all duration-200 font-neuepower cursor-pointer',
+                isActive ? 'text-funky underline underline-offset-4' : 'text-flash',
+              ]"
+            >
+              TUGAS COTS
+            </span>
+          </RouterLink>
         </nav>
 
         <button
@@ -132,6 +143,14 @@
             @click="closeMobileMenu"
           >
             Contact
+          </RouterLink>
+          <RouterLink
+            to="/cots"
+            class="text-flash hover:text-funky transition font-neuepower"
+            active-class="text-funky underline underline-offset-4"
+            @click="closeMobileMenu"
+          >
+            TUGAS COTS
           </RouterLink>
         </nav>
       </div>

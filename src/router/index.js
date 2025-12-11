@@ -7,6 +7,7 @@ import NewsPage from '../views/NewsPage.vue'
 import AboutPage from '../views/AboutPage.vue'
 import ContactPage from '../views/ContactPage.vue'
 import NewsDetailPage from '../views/NewsDetailPage.vue'
+import COTSPage from '@/views/COTSPage.vue'
 
 
 const router = createRouter({
@@ -51,6 +52,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactPage,
+    },
+    {
+      path: '/cots',
+      name: 'cots',
+      component: COTSPage,
     },
   ],
   scrollBehavior(to, from, savedPosition) {
